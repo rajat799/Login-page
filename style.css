@@ -61,3 +61,92 @@ body {
     color: #5b86e5;
     font-weight: bold;
 }
+
+/* Main content styling */
+main {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.8s ease;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login-form label {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+    margin-top: 0.5rem;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+#login-form input[type="text"]:focus,
+#login-form input[type="password"]:focus {
+    border-color: #5b86e5;
+    box-shadow: 0 0 5px rgba(91, 134, 229, 0.3);
+    outline: none;
+}
+
+button[type="submit"] {
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+    background-color: #5b86e5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #4a6cd4;
+}
+
+/* Message styles */
+.message {
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
